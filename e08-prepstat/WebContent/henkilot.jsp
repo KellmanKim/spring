@@ -27,7 +27,7 @@
 						<td><c:out value="${henk.id}" /></td>
 						<td><c:out value="${henk.etunimi}" /></td>
 						<td><c:out value="${henk.sukunimi}" /></td>
-						<td>&nbsp;<!-- Tässä olisi hyvä paikka delete-napille --></td>
+						<td><a href="henkilot?del=${henk.id}" class="poista" >x</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

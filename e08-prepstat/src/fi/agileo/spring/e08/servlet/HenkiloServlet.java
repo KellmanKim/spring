@@ -34,6 +34,7 @@ public class HenkiloServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+				
 		String enimi = request.getParameter("etunimi");
 		String snimi = request.getParameter("sukunimi");
 		
@@ -56,11 +57,17 @@ public class HenkiloServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		List<Henkilo> henkilot;
+		String delId = request.getParameter("del");
 		
 		try {
 			//tietokannasta henkilöt
 			HenkiloDAO hDao = new HenkiloDAO();
+	
+			if (null != delId)
+				hDao.poistaHenkilo(delId);
+	
 			henkilot = hDao.haeKaikki();
+			
 		} catch(DAOPoikkeus e) {
 			throw new ServletException(e);
 		}
