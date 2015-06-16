@@ -57,8 +57,8 @@ public class HenkiloController {
 
 	@RequestMapping(value = "kaikki", method = RequestMethod.GET)
 	public String getAll(Model model) {
-		List<Henkilo> henkilöt = dao.haeKaikki();
-		model.addAttribute("henkilot", henkilöt);
+		List<Henkilo> henkilot = dao.haeKaikki();
+		model.addAttribute("henkilot", henkilot);
 		return "henk/all";
 	}
 }
