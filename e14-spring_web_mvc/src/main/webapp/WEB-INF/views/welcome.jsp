@@ -26,7 +26,8 @@
 		juuri lisätyn henkilön tiedot ja näyttää ne.</p>
 		<h3>Linkki</h3>
 		<p>
-			<a href="henkilot/uusi">henkilot/uusi</a>
+			<a href="henkilot/uusi">henkilot/uusi</a><br />
+			<a href="henkilot/kaikki">Näytä kaikki henkilöt</a>
 		</p>
 	</div>
 </body>
